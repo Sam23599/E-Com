@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "25c18892-c97b-403e-9767-6c9ad53cdee0",
+		"name": "E-Com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29883361"
+	},
+	"item": [
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Laptop\",\n  \"description\": \"Powerful laptop for development\",\n  \"price\": 999.99,\n  \"variants\": [\n    {\n      \"name\": \"Intel Core i5\",\n      \"sku\": \"I5SKU123\",\n      \"additional_cost\": 50.00,\n      \"stock_count\": 50\n    },\n    {\n      \"name\": \"Intel Core i7\",\n      \"sku\": \"I7SKU456\",\n      \"additional_cost\": 100.00,\n      \"stock_count\": 30\n    }\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7100/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7100",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"PS5\",\n  \"description\": \"Powerful device for gaming\",\n  \"price\": 599.99,\n  \"variants\": [\n    {\n      \"name\": \"Standard Edition\",\n      \"sku\": \"PS5-STD-001\",\n      \"additional_cost\": 0.00,\n      \"stock_count\": 50\n    },\n    {\n      \"name\": \"Deluxe Edition\",\n      \"sku\": \"PS5-DLX-002\",\n      \"additional_cost\": 100.00,\n      \"stock_count\": 30\n    }\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7100/products/65a11beacb88fd9075fff194",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7100",
+					"path": [
+						"products",
+						"65a11beacb88fd9075fff194"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7100/products/65a24dc941894345939e10f6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7100",
+					"path": [
+						"products",
+						"65a24dc941894345939e10f6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7100/products/65a11beacb88fd9075fff194",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7100",
+					"path": [
+						"products",
+						"65a11beacb88fd9075fff194"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Variant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"New Variant\",\n  \"sku\": \"NEWVARSKU456\",\n  \"additional_cost\": 3.00,\n  \"stock_count\": 50\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7100/products/65a11beacb88fd9075fff194/variants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7100",
+					"path": [
+						"products",
+						"65a11beacb88fd9075fff194",
+						"variants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Variant",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Deluxe Edition\",\n    \"sku\": \"PS5-DLX-002\",\n    \"additional_cost\": 100,\n    \"stock_count\": 25,\n    \"_id\": \"65a11e0974607fb5123c17cb\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7100/products/65a11beacb88fd9075fff194/variants/65a24e7a41894345939e112f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7100",
+					"path": [
+						"products",
+						"65a11beacb88fd9075fff194",
+						"variants",
+						"65a24e7a41894345939e112f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Variant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7100/products/65a11beacb88fd9075fff194/variants/65a24f5b41894345939e1163",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7100",
+					"path": [
+						"products",
+						"65a11beacb88fd9075fff194",
+						"variants",
+						"65a24f5b41894345939e1163"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Products ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7100/products/search/PS5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7100",
+					"path": [
+						"products",
+						"search",
+						"PS5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
