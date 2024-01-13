@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
-const atlasConnectionString = 'mongodb+srv://satyamvirat:aWFV3ZE3ONkn0EdD@cluster0.padu6zb.mongodb.net/?retryWrites=true&w=majority'
+// Load environment variables from .env file
+require('dotenv').config(); 
+
+const atlasConnectionString = process.env.MONGO_URI || 'mongodb://localhost:27017';
 
 mongoose.connect(atlasConnectionString);
 

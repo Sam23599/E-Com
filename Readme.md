@@ -64,13 +64,11 @@ Make sure you have the following installed:
 
 ### Environment Variables
 
-Update the `mongoose.js` file in the `config` directory with your MongoDB configuration. For example:
+Update the `.env` file in the root directory with the following content:
 
-```javascript
-module.exports = {
-  atlasConnectionString: 'your-mongodb-atlas-connection-string',
-};
-```
+   ```env
+   MONGO_URI=your-mongodb-atlas-connection-string
+   ```
 
 Replace `your-mongodb-atlas-connection-string` with your MongoDB Atlas connection string.
 
@@ -125,7 +123,7 @@ Your API will be running at `http://localhost:7100` or the port you specified.
   - Response: Status 200 OK with the products matching the search query.
 
 
-##Postman Collection
+## Postman Collection
 
 Use the provided Postman collection to test the API. Import the E-Com.postman_collection.json file located in the root folder into Postman. The collection contains pre-configured requests for each API endpoint. Ensure that your server is running before making requests.
 
