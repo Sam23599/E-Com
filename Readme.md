@@ -4,7 +4,7 @@
 
 Welcome to E-Com, a robust API-driven e-commerce platform designed for simplicity and flexibility. This project focuses on delivering a seamless experience for managing products and variants through a set of well-defined RESTful API endpoints.
 
-##Features
+## Features
 
 - **Product Management:** Create, update, delete, and retrieve detailed product information.
 - **Variant Support:** Easily handle products with multiple variants, each with its own set of attributes.
